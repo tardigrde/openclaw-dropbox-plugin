@@ -1,0 +1,7 @@
+.github/
+.git/
+node_modules/
+dist/
+tsconfig.json
+.env
+.env.*
