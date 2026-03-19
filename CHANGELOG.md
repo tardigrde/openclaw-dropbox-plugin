@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.3](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v1.0.2...v1.0.3) (2026-03-19)
+
+
+### Bug Fixes
+
+* add repository url to package.json for npm provenance ([9a8af1e](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/9a8af1eb3df19673c329b26246128f379502907e))
+* regenerate lockfile to include missing opusscript ([19dc26e](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/19dc26e1f7df8bfb44c19c2e7195d34e2b17babb))
+* switch to npm Trusted Publishing (tokenless OIDC) ([dade8bd](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/dade8bd89d1256f79a58cc3594bc147ae501c082))
+* wire up NODE_AUTH_TOKEN for npm publish ([d780bbf](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/d780bbf547d4ad8010a0fe2da031c6eb0ccf7838))
+
 ## [1.0.2](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v1.0.1...v1.0.2) (2026-03-19)
 
 
