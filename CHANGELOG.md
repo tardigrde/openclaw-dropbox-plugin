@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.4](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v1.0.3...v1.0.4) (2026-03-19)
+
+
+### Bug Fixes
+
+* regenerate lockfile to include missing opusscript ([c2492bf](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/c2492bf360b6acd53977323ddd81367375cae9cd))
+* regenerate lockfile to include missing opusscript ([e3e52b7](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/e3e52b70b6fa13ea37aede02e9eb1a88ea9ba3d2))
+
 ## [1.0.3](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v1.0.2...v1.0.3) (2026-03-19)
 
 
