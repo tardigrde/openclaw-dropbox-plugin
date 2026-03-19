@@ -16,4 +16,4 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: "@openclaw/dropbox"
+          package-name: "@tardigrde/dropbox"

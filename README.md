@@ -1,4 +1,4 @@
-# @openclaw/dropbox
+# @tardigrde/dropbox
 
 OpenClaw plugin that provides Dropbox file management tools — list, download, upload, share, search, and delete files.
 
@@ -12,7 +12,7 @@ OpenClaw plugin that provides Dropbox file management tools — list, download, 
 ## Installation
 
 ```bash
-openclaw plugins install @openclaw/dropbox
+openclaw plugins install @tardigrde/dropbox
 ```
 
 ## Configuration
@@ -165,6 +165,16 @@ Delete a file or folder from Dropbox. The item is moved to trash.
 
 **Upload fails with large files**
 - This plugin uses the simple upload endpoint (up to 150 MB). For larger files, chunked upload is needed (not yet implemented)
+
+## Development
+
+```bash
+npm ci              # Install dependencies
+npm run typecheck   # Type-check without emitting
+npx tsc             # Full compile to dist/
+npm test            # Run vitest (watch mode)
+npm test -- --run   # Run vitest once
+```
 
 ## License
 

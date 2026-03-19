@@ -1,14 +1,17 @@
 {
-  "name": "@openclaw/dropbox",
+  "name": "@tardigrde/dropbox",
   "version": "1.0.0",
   "description": "OpenClaw plugin for Dropbox integration — list, download, upload, share, search, and delete files",
   "type": "module",
   "main": "index.ts",
   "openclaw": {
-    "extensions": ["./index.ts"]
+    "extensions": [
+      "./index.ts"
+    ]
   },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
   },
   "keywords": [
     "openclaw",
@@ -25,7 +28,8 @@
     "openclaw": ">=0.1.0"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
     "typescript": "^5.7.0",
-    "@types/node": "^22.0.0"
+    "vitest": "^4.1.0"
   }
 }

@@ -1,4 +1,4 @@
-# Contributing to @openclaw/dropbox
+# Contributing to @tardigrde/dropbox
 
 ## Development Setup
 
