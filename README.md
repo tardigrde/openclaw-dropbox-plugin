@@ -1,4 +1,4 @@
-# @tardigrde/dropbox
+# @tardigrde/openclaw-dropbox-plugin
 
 OpenClaw plugin that provides Dropbox file management tools — list, download, upload, share, search, and delete files.
 
@@ -12,7 +12,7 @@ OpenClaw plugin that provides Dropbox file management tools — list, download, 
 ## Installation
 
 ```bash
-openclaw plugins install @tardigrde/dropbox
+openclaw plugins install @tardigrde/openclaw-dropbox-plugin
 ```
 
 ## Configuration
