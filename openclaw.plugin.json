@@ -1,0 +1,20 @@
+{
+  "id": "dropbox",
+  "name": "Dropbox",
+  "description": "File management tools for Dropbox — list, download, upload, share, search, and delete",
+  "version": "1.0.0",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "maxDownloadBytes": {
+        "type": "number",
+        "description": "Maximum file size in bytes allowed for download (default: 104857600 = 100MB)",
+        "default": 104857600
+      }
+    }
+  },
+  "uiHints": {
+    "category": "cloud-storage",
+    "icon": "cloud"
+  }
+}
