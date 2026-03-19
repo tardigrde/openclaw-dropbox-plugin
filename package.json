@@ -1,6 +1,6 @@
 {
   "name": "@tardigrde/dropbox",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "OpenClaw plugin for Dropbox integration — list, download, upload, share, search, and delete files",
   "type": "module",
   "main": "index.ts",

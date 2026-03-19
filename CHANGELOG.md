@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v1.0.1...v1.0.2) (2026-03-19)
+
+
+### Bug Fixes
+
+* add workflow_dispatch to publish.yml for manual trigger ([9abcb9b](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/9abcb9b8e041a55696365d6cb2fa0b0ed9a4ee9d))
+* use npm Trusted Publishing instead of token ([9d8b4be](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/9d8b4be3e87ee9ed5255097aa9748c7e4154998e))
+
 ## [1.0.1](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v1.0.0...v1.0.1) (2026-03-19)
 
 
