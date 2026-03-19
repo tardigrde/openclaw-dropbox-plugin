@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v1.0.0...v1.0.1) (2026-03-19)
+
+
+### Bug Fixes
+
+* use GH_TOKEN PAT for release-please to trigger publish ([d4c5853](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/d4c58534b9d07c0f299180c4a39a738411c5487b))
+
 ## 1.0.0 (2026-03-19)
 
 
