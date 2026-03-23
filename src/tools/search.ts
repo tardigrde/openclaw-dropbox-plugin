@@ -1,55 +1,42 @@
 import { Type } from "@sinclair/typebox";
 import type { DropboxClient } from "../client.js";
 import { formatBytes } from "../utils.js";
+import { jsonResult } from "../result.js";
 
-interface PluginApi {
-  registerTool(
-    name: string,
-    schema: Record<string, unknown>,
-    handler: (params: Record<string, unknown>) => Promise<Record<string, unknown>>
-  ): void;
-}
-
-export function registerSearchTool(
-  api: PluginApi,
-  getClient: () => DropboxClient
-): void {
-  api.registerTool(
-    "dropbox_search",
-    {
-      title: "Search Dropbox",
-      description:
-        "Search for files and folders in Dropbox by name. " +
-        "Supports partial matches.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          query: {
-            type: "string",
-            description: "Search query string.",
-          },
-          path: {
-            type: "string",
-            description:
-              "Limit search to a specific folder path. Empty string searches everywhere.",
-            default: "",
-          },
-          maxResults: {
-            type: "number",
-            description: "Maximum number of results to return (default: 20)",
-            default: 20,
-          },
-        },
-        required: ["query"],
-      },
-    },
-    async (params) => {
+export function createSearchTool(getClient: () => DropboxClient) {
+  return {
+    name: "dropbox_search",
+    label: "Search Dropbox",
+    description:
+      "Search for files and folders in Dropbox by name. " +
+      "Supports partial matches.",
+    parameters: Type.Object({
+      query: Type.String({
+        description: "Search query string.",
+      }),
+      path: Type.Optional(
+        Type.String({
+          description:
+            "Limit search to a specific folder path. Empty string searches everywhere.",
+          default: "",
+        })
+      ),
+      maxResults: Type.Optional(
+        Type.Number({
+          description: "Maximum number of results to return (default: 20)",
+          default: 20,
+        })
+      ),
+    }),
+    async execute(
+      _id: string,
+      params: { query: string; path?: string; maxResults?: number }
+    ) {
       const client = getClient();
-      const query = params.query as string;
-      const path = (params.path as string) || "";
-      const maxResults = (params.maxResults as number) ?? 20;
+      const path = params.path || "";
+      const maxResults = params.maxResults ?? 20;
 
-      const result = await client.search(query, path, maxResults);
+      const result = await client.search(params.query, path, maxResults);
 
       const matches = result.matches.map((match) => {
         const meta = match.metadata.metadata;
@@ -62,11 +49,11 @@ export function registerSearchTool(
         };
       });
 
-      return {
+      return jsonResult({
         matches,
         has_more: result.has_more,
         cursor: result.has_more ? result.cursor : undefined,
-      };
-    }
-  );
+      });
+    },
+  };
 }
