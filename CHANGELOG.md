@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v1.0.4...v2.0.0) (2026-03-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* requires openclaw >=2026.3.22
+
+### Features
+
+* migrate to OpenClaw 2026.3.22 plugin SDK ([78b3124](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/78b3124e9eea078140d27275601838d620bf3d8b))
+* migrate to OpenClaw 2026.3.22 plugin SDK ([ba7bafd](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/ba7bafd36a58234c25d67b9008d3cb9df4ec6d4e)), closes [#14](https://github.com/tardigrde/openclaw-dropbox-plugin/issues/14)
+
 ## [1.0.4](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v1.0.3...v1.0.4) (2026-03-19)
 
 
