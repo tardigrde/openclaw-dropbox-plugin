@@ -1,48 +1,29 @@
 import { Type } from "@sinclair/typebox";
 import type { DropboxClient } from "../client.js";
+import { jsonResult } from "../result.js";
 
-interface PluginApi {
-  registerTool(
-    name: string,
-    schema: Record<string, unknown>,
-    handler: (params: Record<string, unknown>) => Promise<Record<string, unknown>>
-  ): void;
-}
-
-export function registerShareTool(
-  api: PluginApi,
-  getClient: () => DropboxClient
-): void {
-  api.registerTool(
-    "dropbox_share",
-    {
-      title: "Share Dropbox File",
-      description:
-        "Create a shared link for a Dropbox file or folder. " +
-        "Returns a publicly accessible URL. " +
-        "Note: shared links are view-only by default.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          path: {
-            type: "string",
-            description:
-              "Dropbox path of the file or folder to share. Must start with '/'.",
-          },
-        },
-        required: ["path"],
-      },
-    },
-    async (params) => {
+export function createShareTool(getClient: () => DropboxClient) {
+  return {
+    name: "dropbox_share",
+    label: "Share Dropbox File",
+    description:
+      "Create a shared link for a Dropbox file or folder. " +
+      "Returns a publicly accessible URL. " +
+      "Note: shared links are view-only by default.",
+    parameters: Type.Object({
+      path: Type.String({
+        description:
+          "Dropbox path of the file or folder to share. Must start with '/'.",
+      }),
+    }),
+    async execute(_id: string, params: { path: string }) {
       const client = getClient();
-      const path = params.path as string;
+      const result = await client.createSharedLink(params.path);
 
-      const result = await client.createSharedLink(path);
-
-      return {
+      return jsonResult({
         url: result.url,
         name: result.name,
-      };
-    }
-  );
+      });
+    },
+  };
 }

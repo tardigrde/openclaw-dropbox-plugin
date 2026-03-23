@@ -1,23 +1,11 @@
+import { definePluginEntry } from "openclaw/plugin-sdk/plugin-entry";
 import { DropboxClient } from "./client.js";
-import { registerListTool } from "./tools/list.js";
-import { registerDownloadTool } from "./tools/download.js";
-import { registerUploadTool } from "./tools/upload.js";
-import { registerShareTool } from "./tools/share.js";
-import { registerSearchTool } from "./tools/search.js";
-import { registerDeleteTool } from "./tools/delete.js";
-
-interface PluginApi {
-  registerTool(
-    name: string,
-    schema: Record<string, unknown>,
-    handler: (params: Record<string, unknown>) => Promise<Record<string, unknown>>
-  ): void;
-}
-
-interface PluginContext {
-  api: PluginApi;
-  config?: Record<string, unknown>;
-}
+import { createListTool } from "./tools/list.js";
+import { createDownloadTool } from "./tools/download.js";
+import { createUploadTool } from "./tools/upload.js";
+import { createShareTool } from "./tools/share.js";
+import { createSearchTool } from "./tools/search.js";
+import { createDeleteTool } from "./tools/delete.js";
 
 let client: DropboxClient | null = null;
 
@@ -35,13 +23,17 @@ function getClient(): DropboxClient {
   return client;
 }
 
-export default function register(context: PluginContext): void {
-  const { api } = context;
-
-  registerListTool(api, getClient);
-  registerDownloadTool(api, getClient);
-  registerUploadTool(api, getClient);
-  registerShareTool(api, getClient);
-  registerSearchTool(api, getClient);
-  registerDeleteTool(api, getClient);
-}
+export default definePluginEntry({
+  id: "dropbox",
+  name: "Dropbox",
+  description:
+    "File management tools for Dropbox — list, download, upload, share, search, and delete",
+  register(api) {
+    api.registerTool(createListTool(getClient));
+    api.registerTool(createDownloadTool(getClient));
+    api.registerTool(createUploadTool(getClient));
+    api.registerTool(createShareTool(getClient));
+    api.registerTool(createSearchTool(getClient));
+    api.registerTool(createDeleteTool(getClient));
+  },
+});
