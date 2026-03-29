@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.1](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v2.0.0...v2.0.1) (2026-03-29)
+
+
+### Bug Fixes
+
+* add openclaw.compat and openclaw.build fields for ClawHub publishing ([801dcaa](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/801dcaa87e3b65176486cd81ce721ec284a8a2d8))
+* add openclaw.compat and openclaw.build fields for ClawHub publishing ([b111fa8](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/b111fa8e824067fe4d4c1f7b8422a2c8d0c322c1))
+
 ## [2.0.0](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v1.0.4...v2.0.0) (2026-03-23)
 
 
