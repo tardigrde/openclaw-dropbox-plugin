@@ -28,17 +28,18 @@ Or add it to your OpenClaw configuration in `openclaw.json`:
 ```json
 {
   "plugins": {
-    "dropbox": {
-      "env": {
-        "DROPBOX_ACCESS_TOKEN": "sl.xxxxxxxxxxxxxxxxxxxxx"
-      },
-      "config": {
-        "maxDownloadBytes": 104857600
+    "entries": {
+      "dropbox": {
+        "config": {
+          "maxDownloadBytes": 104857600
+        }
       }
     }
   }
 }
 ```
+
+Plugin-specific config goes under `plugins.entries.dropbox.config`. The access token must be set as an environment variable (`DROPBOX_ACCESS_TOKEN`) before starting OpenClaw.
 
 ## Tools
 
