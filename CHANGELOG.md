@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.2](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v2.0.1...v2.0.2) (2026-03-30)
+
+
+### Bug Fixes
+
+* resolve ClawHub security scan mismatches ([d9bccd4](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/d9bccd43df5805a819f4d090959ea4053c8e958b))
+* resolve ClawHub security scan mismatches ([0f230fb](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/0f230fb426d19d090603afdccc0b21ca56ba5987))
+
 ## [2.0.1](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v2.0.0...v2.0.1) (2026-03-29)
 
 
