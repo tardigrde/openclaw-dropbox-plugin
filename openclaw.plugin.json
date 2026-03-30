@@ -2,9 +2,12 @@
   "id": "dropbox",
   "name": "Dropbox",
   "description": "File management tools for Dropbox — list, download, upload, share, search, and delete",
-  "version": "1.0.0",
+  "providerAuthEnvVars": {
+    "dropbox": ["DROPBOX_ACCESS_TOKEN"]
+  },
   "configSchema": {
     "type": "object",
+    "additionalProperties": false,
     "properties": {
       "maxDownloadBytes": {
         "type": "number",
