@@ -3,7 +3,14 @@
   "version": "2.0.2",
   "description": "OpenClaw plugin for Dropbox integration — list, download, upload, share, search, and delete files",
   "type": "module",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "skills",
+    "openclaw.plugin.json"
+  ],
   "openclaw": {
     "extensions": [
       "./index.ts"
@@ -15,9 +22,14 @@
     "build": {
       "openclawVersion": "2026.3.22",
       "pluginSdkVersion": "2026.3.22"
-    }
+    },
+    "runtimeExtensions": [
+      "./dist/index.js"
+    ]
   },
   "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
     "typecheck": "tsc --noEmit",
     "test": "vitest"
   },

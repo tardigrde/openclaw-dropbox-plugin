@@ -1,4 +1,4 @@
-import { definePluginEntry } from "openclaw/plugin-sdk/plugin-entry";
+import { definePluginEntry, type OpenClawPluginDefinition } from "openclaw/plugin-sdk/plugin-entry";
 import { DropboxClient } from "./client.js";
 import { createListTool } from "./tools/list.js";
 import { createDownloadTool } from "./tools/download.js";
@@ -23,7 +23,7 @@ function getClient(): DropboxClient {
   return client;
 }
 
-export default definePluginEntry({
+const plugin: OpenClawPluginDefinition = definePluginEntry({
   id: "dropbox",
   name: "Dropbox",
   description:
@@ -37,3 +37,5 @@ export default definePluginEntry({
     api.registerTool(createDeleteTool(getClient));
   },
 });
+
+export default plugin;
