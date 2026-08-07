@@ -1,6 +1,6 @@
 {
   "name": "@tardigrde/openclaw-dropbox-plugin",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "OpenClaw plugin for Dropbox integration — list, download, upload, share, search, and delete files",
   "type": "module",
   "main": "dist/index.js",
