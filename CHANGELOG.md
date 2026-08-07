@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.3](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v2.0.2...v2.0.3) (2026-08-07)
+
+
+### Bug Fixes
+
+* restore openclaw 2026.7.x compatibility ([f819613](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/f81961392119f891d23f28504cee6c03db30c3b2))
+* restore openclaw 2026.7.x compatibility ([c6e6cda](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/c6e6cda0bd01058196fa95a75fefa3387810c870))
+* **security:** bump openclaw to 2026.7.1, clearing critical advisories ([519590e](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/519590eff1d7b1d4bc61910fd2caa50425ab5f65))
+* **security:** bump openclaw to 2026.7.1, clearing critical advisories ([3e2188b](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/3e2188be5a1ff0d7dd71f32aa85e189c3c8176ba))
+
 ## [2.0.2](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v2.0.1...v2.0.2) (2026-03-30)
 
 
