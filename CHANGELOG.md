@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.4](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v2.0.3...v2.0.4) (2026-08-07)
+
+
+### Bug Fixes
+
+* resync package-lock.json with npm 12 to satisfy npm ci ([912bbb8](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/912bbb867838bd2cde1351c4a3aef8ca8e9c45f2))
+* resync package-lock.json with npm 12 to satisfy npm ci ([74bafc1](https://github.com/tardigrde/openclaw-dropbox-plugin/commit/74bafc11051676918c3c76f1a6627ae3296c4c46))
+
 ## [2.0.3](https://github.com/tardigrde/openclaw-dropbox-plugin/compare/v2.0.2...v2.0.3) (2026-08-07)
 
 
