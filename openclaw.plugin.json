@@ -2,9 +2,28 @@
   "id": "dropbox",
   "name": "Dropbox",
   "description": "File management tools for Dropbox — list, download, upload, share, search, and delete",
-  "providerAuthEnvVars": {
-    "dropbox": ["DROPBOX_ACCESS_TOKEN"]
+  "setup": {
+    "providers": [
+      {
+        "id": "dropbox",
+        "envVars": ["DROPBOX_ACCESS_TOKEN"]
+      }
+    ]
   },
+  "contracts": {
+    "tools": [
+      "dropbox_list",
+      "dropbox_download",
+      "dropbox_upload",
+      "dropbox_share",
+      "dropbox_search",
+      "dropbox_delete"
+    ]
+  },
+  "activation": {
+    "onStartup": false
+  },
+  "skills": ["skills/dropbox"],
   "configSchema": {
     "type": "object",
     "additionalProperties": false,
